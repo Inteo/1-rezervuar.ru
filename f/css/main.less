@@ -4045,8 +4045,15 @@ textarea {
 }
 .header {
 	min-height: 100px;
-	position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
+  z-index: 10;
+  min-width: 1000px;
+  background: #fff;
+  box-shadow: 0 2px 7px -1px rgba(0,0,0,.05);
 	&__holder {
 		position: absolute;
     padding: 27px 340px;
