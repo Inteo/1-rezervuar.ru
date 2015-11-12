@@ -18,13 +18,18 @@ $(document).ready(function(){
       }
     }
   });
+  $(".services__line").each(function(){
+    var heights =  $(this).find(".services__item-holder").map(function() {return $(this).height();});
+    $(this).find(".services__item-holder").height(Math.max.apply(null, heights));
+  })
+  
 });
 $(function(){
 	$(".js-scroll-link").click(function(){
     if(!$(this).hasClass("active")) {
       var scrollTo = $(this).data("scrollto"),
       scrollTarget = $('*[data-scrollto="'+scrollTo+'"].js-scroll-target');
-      $.scrollTo(scrollTarget, 500);
+      $.scrollTo(scrollTarget, 500, {offset: -199});
     }
   });
   $(".header__ham").click(function(){

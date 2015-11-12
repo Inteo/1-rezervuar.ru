@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
     <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
     <link rel="stylesheet" href="f/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="f/js/common.js"></script>
     <script>
@@ -36,8 +37,8 @@
       });
       ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
-            center: [55.829456, 37.511418],
-            zoom: 16,
+            center: [55.830237, 37.517930],
+            zoom: 17,
             controls: [],
           }),
           myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
@@ -61,9 +62,9 @@
       <div class="header__holder">
         <div class="holder">
           <div class="logo">
-            <a href="/"><span><span>Дымовые</span> трубы России</span></a>
+            <a href="/"><span>Первая<br> резервуарная<br> компания</span></a>
           </div>
-          <div class="header__mail"><a href="mailto:info@dymovyetruby.ru"><i class="icon-mail"></i>info@dymovyetruby.ru</a></div>
+          <div class="header__mail"><a href="mailto:info@1-rezervuar.ru"><i class="icon-mail"></i>info@1-rezervuar.ru</a></div>
         </div>
       </div>
       <div class="header__phone">
@@ -72,12 +73,12 @@
       </div>
       <div class="ham-menu">
         <ul>
-          <li><a href="#" class="js-scroll-link" data-scrollto="1">О нас в цифрах</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="2">Виды дымовых труб</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="3">Выполненные работы</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="4">Услуги</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="5">7 причин работать с нами</a>
-          </li> <li><a href="#" class="js-scroll-link" data-scrollto="6">Нам доверяют</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="achiv">О нас в цифрах</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="types">Виды резервуаров</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="services">Услуги</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="projects">Выполненные работы</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="trust">Нам доверяют</a></li>
+          <li><a href="#" class="js-scroll-link" data-scrollto="facts">Факты о нас</a></li>
         </ul>
         <a href="#" class="ham-menu__search iconize-search">&nbsp;</a>
       </div>
@@ -86,33 +87,232 @@
       <div class="preface">
         <div class="holder">
           <h1 class="preface__text">
-            <span>Промышленные дымовые трубы <br>для котельных</span> <a href="#">от производителя</a>
+            Стальные<br>резервуары<br><span>от производителя</span>
           </h1>
         </div>
         <img src="f/i/preface-back.jpg" alt="">
       </div>
-      <section class="subsection consult">
+      <section class="consult">
         <div class="holder">
-          <p class="consult__text">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
-          <a href="#" class="btn consult__btn">Получить консультацию</a>
+          <p class="consult__text">Закажите расчет стоимости Вашего резервуара<br>или проконсультируйтесь со специалистом!</p>
+          <a href="#" class="btn consult__btn">Получить расчет</a>
         </div>
       </section>
-      <section class="subsection trust js-scroll-target" data-scrollto="6">
+      <section class="achiv js-scroll-target" data-scrollto="achiv">
+        <img src="f/i/achiv-back.png" alt="">
         <div class="holder">
-          <div class="trust__title"><p>Нам доверяют</p></div>
-          <div class="trust__wrap">
-            <div class="trust__holder">
-              <div class="trust__item"><img src="f/i/trust/1.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/2.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/3.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/4.jpg">
-              </div><div class="trust__item"><img src="f/i/trust/5.jpg"></div>
+          <div class="achiv__holder">
+            <p class="achiv__item">до <span>15</span><br>резервуаров одновременно<br>находятся в производстве
+            </p><p class="achiv__item"><span>100</span><br>м<sup>3</sup> максимальный объем<br>изготавливаемых резервуаров
+            </p><p class="achiv__item">более <span>20</span><br>лет успешной работы
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="subsection types js-scroll-target" data-scrollto="types">
+        <div class="holder">
+          <p class="subsection__title subsection__title_white">Мы производим 15 видов стальных резервуаров
+            <span>отличающееся по назначению, размещению, исполнению, строению и форме</span>
+          </p>
+          <div class="types__holder">
+            <div class="types__item">
+              <div class="types__img">
+                <img src="f/i/types/1.png" alt="">
+              </div>
+              <p class="types__subtitle">по назначению:</p>
+              <p><a href="#" class="types__link">Резервуары для воды</a></p>
+              <p><a href="#" class="types__link">Резервуары для нефти <br>и нефтепродуктов</a></p>
+              <p><a href="#" class="types__link">Резервуары пожарные (противопожарные)</a></p>
+              <p><a href="#" class="types__link">Резервуары для топлива</a></p>
+              <p><a href="#" class="types__link">Резервуары для масла</a></p>
+            </div><div class="types__item">
+              <div class="types__img">
+                <img src="f/i/types/2.png" alt="">
+              </div>
+              <p class="types__subtitle">по назначению:</p>
+              <p><a href="#" class="types__link">Резервуары подземные</a></p>
+              <p><a href="#" class="types__link">Резервуары наземные</a></p>
+            </div><div class="types__item">
+              <div class="types__img">
+                <img src="f/i/types/3.png" alt="">
+              </div>
+              <p class="types__subtitle">по назначению:</p>
+              <p><a href="#" class="types__link">Одностенные резервуары</a></p>
+              <p><a href="#" class="types__link">Двустенные резервуары</a></p>
+            </div><div class="types__item">
+              <div class="types__img">
+                <img src="f/i/types/4.png" alt="">
+              </div>
+              <p class="types__subtitle">по назначению:</p>
+              <p><a href="#" class="types__link">Однокамерные резервуары</a></p>
+              <p><a href="#" class="types__link">Многокамерные резервуары</a></p>
+            </div><div class="types__item">
+              <div class="types__img">
+                <img src="f/i/types/5.png" alt="">
+              </div>
+              <p class="types__subtitle">по назначению:</p>
+              <p><a href="#" class="types__link">Горизонтальные резервуары</a></p>
+              <p><a href="#" class="types__link">Цилиндрические резервуары</a></p>
+              <p><a href="#" class="types__link">Прямоугольные резервуары</a></p>
+            </div><div class="types__item">
+              <div class="types__img types__img_calc">
+                <a href="#" class="types__calc">Рассчитать<br>стоимость<br>резервуара</a>
+                <img src="f/i/types/calc.png" alt="">
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="subsection facts js-scroll-target" data-scrollto="5">
-        <p class="subsection__title">Дополнительные факты о нас</p>
+      <section class="subsection services js-scroll-target" data-scrollto="services">
+        <p class="subsection__title">Услуги</p>
+        <div class="holder">
+          <div class="services__holder">
+            <div class="services__line">
+              <div class="services__item">
+                <div class="services__item-holder">
+                  <div class="services__img">
+                    <img src="f/i/services/1.jpg" alt="">
+                  </div>
+                  <a href="#" class="services__name">Проектирование</a>
+                  <p class="services__text">Наша компания имеет 20-летний опыт в проектировании, что позволяет нам создавать качественный и безопасный в эксплуатации продукт.</p>
+                </div>
+              </div><div class="services__item">
+                <div class="services__item-holder">
+                  <div class="services__img">
+                    <img src="f/i/services/2.jpg" alt="">
+                  </div>
+                  <a href="#" class="services__name">Производство</a>
+                  <div class="services__text"><p>Проект стального резервуара, разработанный нашей компанией, проходит обязательную процедуру согласования с Заказчиком и отправляется на производство.</p><p>Мы имеем большой опыт по изготовлению стальных резервуаров разного исполнения.</p></div>
+                </div>
+              </div>
+            </div>
+            <div class="services__line">
+              <div class="services__item">
+                <div class="services__item-holder">
+                  <div class="services__img">
+                    <img src="f/i/services/3.jpg" alt="">
+                  </div>
+                  <a href="#" class="services__name">Доставка</a>
+                  <p class="services__text">Доставка стального резервуара до места монтажа может осуществляться автотранспортом (низкорамный трал, бортовой полуприцеп или евротрал) или железнодорожным транспортом.</p>
+                </div>
+              </div><div class="services__item">
+                <div class="services__item-holder">
+                  <div class="services__img">
+                    <img src="f/i/services/4.jpg" alt="">
+                  </div>
+                  <a href="#" class="services__name">Монтаж</a>
+                  <p class="services__text">Для проведения работ по монтажу на объект выезжают наши специалисты, уже ознакомленные с объектом и условиями последующей эксплуатации. Установка резервуара производится нашими специалистами в максимально короткие сроки.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="calc-form">
+        <div class="holder">
+          <div class="calc-form__holder">
+            <p class="subsection__title subsection__title_white">Расчет стоимости резервуара</p>
+            <div class="input-wrap">
+              <label for="input-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" id="input-name" class="input" value="">
+            </div>
+            <div class="input-wrap">
+              <label for="input-tel" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+              <input type="tel" id="input-tel" class="input" value="">
+            </div>
+            <input type="email" class="input" placeholder="E-mail">
+            <p class="calc-form__hint">Для расчета стоимости Вашего резервуара загрузите документы:</p>
+            <a href="#" class="calc-form__file">Прикрепить файлы</a>
+            <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+            <div class="calc-form__btn"><a href="#" class="btn">Получить расчет</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection projects js-scroll-target" data-scrollto="projects">
+        <div class="holder">
+          <p class="subsection__title">Выполненые проекты
+            <span>Нас уже знают в 30 городах России</span>
+          </p>
+          <div class="projects__holder">
+            <div class="projects__item">
+              <a href="#">
+                <img src="f/i/projects/1.jpg" alt="">
+                <span class="projects__text">
+                  <span class="projects__name">Стальные резервуары для хранения и нагрева битума</span>
+                  <span class="projects__detail">г. Санкт-Петербург</span>
+                  <span class="projects__detail">Август, 2015</span>
+                </span>
+              </a>
+            </div><div class="projects__item">
+              <a href="#">
+                <img src="f/i/projects/2.jpg" alt="">
+                <span class="projects__text">
+                  <span class="projects__name">Стальные резервуары для хранения питьевой воды</span>
+                  <span class="projects__detail">г. Аматы</span>
+                  <span class="projects__detail">Июнь, 2015</span>
+                </span>
+              </a>
+            </div><div class="projects__item">
+              <a href="#">
+                <img src="f/i/projects/3.jpg" alt="">
+                <span class="projects__text">
+                  <span class="projects__name">Стальные резервуары для хранения нефтепродуктов</span>
+                  <span class="projects__detail">Костромская обл.</span>
+                  <span class="projects__detail">Апрель, 2015</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trust js-scroll-target" data-scrollto="trust">
+        <div class="holder">
+          <p class="trust__title">Нам доверяют</p>
+          <div class="trust__holder">
+            <div class="trust__item"><img src="f/i/trust/1.jpg">
+            </div><div class="trust__item"><img src="f/i/trust/2.jpg">
+            </div><div class="trust__item"><img src="f/i/trust/3.jpg">
+            </div><div class="trust__item"><img src="f/i/trust/4.jpg">
+            </div><div class="trust__item"><img src="f/i/trust/5.jpg"></div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection types types_solutions">
+        <div class="holder">
+          <p class="subsection__title">Готовые решения</p>
+          <div class="types__holder">
+            <div class="types__item">
+              <a href="#">
+                <span class="types__img">
+                  <img src="f/i/types/6.png" alt="">
+                </span>
+                <span class="types__link">Резервуар наземный одностенный объемом от 3 до 20 м³</span>
+              </a>
+            </div><div class="types__item">
+              <a href="#">
+                <span class="types__img">
+                  <img src="f/i/types/7.png" alt="">
+                </span>
+                <span class="types__link">Резервуар наземный одностенный объемом от 40 до 60 м³</span>
+              </a>
+            </div><div class="types__item">
+              <a href="#">
+                <span class="types__img">
+                  <img src="f/i/types/8.png" alt="">
+                </span>
+                <span class="types__link">Резервуар подземный одностенный объемом от 40 до 60 м³</span>
+              </a>
+            </div>
+          </div>
+          <div class="types__btn"><a href="#" class="btn btn_blue btn_small">Смотреть весь список</a></div>
+        </div>
+      </section>
+      <section class="subsection facts js-scroll-target" data-scrollto="facts">
+        <p class="subsection__title subsection__title_white">Дополнительные факты о нас</p>
         <div class="facts__holder">
           <div class="holder">
             <div class="facts__slider">
@@ -179,22 +379,38 @@
           </div>
         </div>
       </section>
-      <section class="subsection consult">
+      <section class="subsection contacts clearfix">
         <div class="holder">
-          <p class="consult__text">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
-          <a href="#" class="btn consult__btn">Получить консультацию</a>
+          <p class="subsection__title">Контакты</p>
+          <div class="contacts__map" id="map"></div>
+          <div class="contacts__info">
+            <p class="contacts__address">г. Москва, Коптевская ул., 67 (Бизнес-центр «Таволга»)</p>
+            <a href="mailto:info@1-rezervuar.ru" class="contacts__mail">info@1-rezervuar.ru</a>
+            <p class="contacts__phone">+7 (495) 135-08-87</p>
+          </div>
+        </div>
+      </section>
+      <section class="consult">
+        <div class="holder">
+          <p class="consult__text">Закажите расчет стоимости Вашего резервуара<br>или проконсультируйтесь со специалистом!</p>
+          <a href="#" class="btn consult__btn">Получить расчет</a>
         </div>
       </section>
     </div>
   </div> 
-  <div class="madeby">
-    Создание сайта<a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
-  </div> 
+  <div class="footer">
+    <div class="holder">
+      <p class="copyright">© 2015 АО «Первая резервуарная компания»</p>
+      <p class="madeby">
+        Создание сайта - <a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
+      </p>
+    </div>
+  </div>
   <div class="popups">
     <div class="popup" id="service-popup">
       <div class="popup__holder">
         <div class="popup__half">
-          <img src="f/i/services/5.jpg" alt="">
+          <img src="f/i/services/4.jpg" alt="">
           <p class="popup__subtitle">Проектирование</p>
           <p class="popup__text">Конструкторское бюро ООО «Каскад-металл» имеет огромный опыт в разработке проектов промышленных дымовых труб и способно выполнить самые сложные проектные работы в кратчайшие сроки. Непосредственный контакт конструкторского бюро и производства дымовых труб позволяет максимально сократить издержки при изготовлении дымовых труб, применяя самые удобные и рациональные технологические решения.</p>
         </div><div class="popup__half">
