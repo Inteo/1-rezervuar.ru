@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="f/i//favicon.ico">
+    <title>Rezervuar</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="f/js/jquery-1.11.3.min.js"></script>
+    <script src="f/js/jquery.scrollTo.min.js"></script>
+    <script src="f/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+    <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="f/css/main.css">
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="f/js/common.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.facts__slider-holder').carouFredSel({
+          responsive: true,
+          pagination: '.facts__pager',
+          width: "100%",
+          scroll: {
+            duration: 450,
+            timeoutDuration: 9000,
+            fx: 'crossfade',
+          }
+        });
+      });
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [55.829456, 37.511418],
+            zoom: 16,
+            controls: [],
+          }),
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: '',
+            balloonContent: ''
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'f/i/marker.png',
+            iconImageSize: [20, 34],
+            iconImageOffset: [-10, -34]
+          });
+        myMap.geoObjects.add(myPlacemark);
+      });
+    </script>
+  </head>
+<body>
+  <div class="wrap clearfix">  
+    <header class="header js-scroll-target clearfix" data-scrollto="0">
+      <a href="#" class="header__ham iconize-ham">&nbsp;</a>
+      <div class="header__holder">
+        <div class="holder">
+          <div class="logo">
+            <a href="/"><span><span>Дымовые</span> трубы России</span></a>
+          </div>
+          <div class="header__mail"><a href="mailto:info@dymovyetruby.ru"><i class="icon-mail"></i>info@dymovyetruby.ru</a></div>
+        </div>
+      </div>
+      <div class="header__phone">
+        <p>+7 (495) 135-08-87</p>
+        <a href="#callback-popup" class="modal-inline">Закзать обратный звонок</a>
+      </div>
+      <div class="ham-menu">
+        <ul>
+          <li><a href="#" class="js-scroll-link" data-scrollto="1">О нас в цифрах</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="2">Виды дымовых труб</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="3">Выполненные работы</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="4">Услуги</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="5">7 причин работать с нами</a>
+          </li> <li><a href="#" class="js-scroll-link" data-scrollto="6">Нам доверяют</a></li>
+        </ul>
+        <a href="#" class="ham-menu__search iconize-search">&nbsp;</a>
+      </div>
+    </header>
+    <div class="content">
+      <div class="preface">
+        <div class="holder">
+          <h1 class="preface__text">
+            <span>Промышленные дымовые трубы <br>для котельных</span> <a href="#">от производителя</a>
+          </h1>
+        </div>
+        <img src="f/i/preface-back.jpg" alt="">
+      </div>
+      <section class="subsection consult">
+        <div class="holder">
+          <p class="consult__text">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
+          <a href="#" class="btn consult__btn">Получить консультацию</a>
+        </div>
+      </section>
+      <section class="subsection trust js-scroll-target" data-scrollto="6">
+        <div class="holder">
+          <div class="trust__title"><p>Нам доверяют</p></div>
+          <div class="trust__wrap">
+            <div class="trust__holder">
+              <div class="trust__item"><img src="f/i/trust/1.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/2.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/3.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/4.jpg">
+              </div><div class="trust__item"><img src="f/i/trust/5.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection facts js-scroll-target" data-scrollto="5">
+        <p class="subsection__title">Дополнительные факты о нас</p>
+        <div class="facts__holder">
+          <div class="holder">
+            <div class="facts__slider">
+              <div class="facts__slider-holder">
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+                <div class="facts__item">
+                  <div class="facts__info facts__side">
+                    <p class="facts__title">Мы работаем на рынке более 13 лет</p>
+                    <p class="facts__text">За это время мы доказали свою надежность таким компаниям, как ОАО «ЛУКОЙЛ», ОАО «НК «Роснефть», ОАО «Газпром нефть» и многим другим</p>
+                  </div><div class="facts__side facts__img">
+                    <img src="f/i/facts.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="facts__pager"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection consult">
+        <div class="holder">
+          <p class="consult__text">Закажите бесплатный обратный звонок <br>для консультации со специалистом!</p>
+          <a href="#" class="btn consult__btn">Получить консультацию</a>
+        </div>
+      </section>
+    </div>
+  </div> 
+  <div class="madeby">
+    Создание сайта<a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
+  </div> 
+  <div class="popups">
+    <div class="popup" id="service-popup">
+      <div class="popup__holder">
+        <div class="popup__half">
+          <img src="f/i/services/5.jpg" alt="">
+          <p class="popup__subtitle">Проектирование</p>
+          <p class="popup__text">Конструкторское бюро ООО «Каскад-металл» имеет огромный опыт в разработке проектов промышленных дымовых труб и способно выполнить самые сложные проектные работы в кратчайшие сроки. Непосредственный контакт конструкторского бюро и производства дымовых труб позволяет максимально сократить издержки при изготовлении дымовых труб, применяя самые удобные и рациональные технологические решения.</p>
+        </div><div class="popup__half">
+          <p class="popup__title">Получить подробную консультацию по проектированию</p>
+          <div class="input-wrap">
+            <label for="input-name" class="input-hint">
+              Фамилия и Имя<span>*</span>
+            </label>
+            <input type="text" id="input-name" class="input" value="">
+          </div>
+          <div class="input-wrap">
+            <label for="input-tel" class="input-hint">
+              Телефон<span>*</span>
+            </label>
+            <input type="tel" id="input-tel" class="input" value="">
+          </div>
+          <input type="email" class="input" placeholder="E-mail">
+          <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+          <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="tube-popup">
+      <div class="popup__holder">
+        <div class="popup__half">
+          <img src="f/i/tube.jpg" alt="">
+        </div><div class="popup__half">
+          <p class="popup__title">Трубы дымовые (вытяжные) самонесущие</p>
+          <div class="popup__notes">
+            <p class="popup__notes-title">Плюсы:</p>
+            <div class="popup__notes-text">
+              <p>Сравнительно дешевое производство</p>
+              <p>Простота конструкции</p>
+            </div>
+            <p class="popup__notes-title">Минусы:</p>
+            <p class="popup__notes-text">При частичном разрушении ствола, он подлежит замене целиком</p>
+          </div>
+          <div class="input-wrap">
+            <label for="input-name" class="input-hint">
+              Фамилия и Имя<span>*</span>
+            </label>
+            <input type="text" id="input-name" class="input" value="">
+          </div>
+          <div class="input-wrap">
+            <label for="input-tel" class="input-hint">
+              Телефон<span>*</span>
+            </label>
+            <input type="tel" id="input-tel" class="input" value="">
+          </div>
+          <input type="email" class="input" placeholder="E-mail">
+          <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+          <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_callback" id="callback-popup" style="width: 500px;">
+      <div class="popup__holder">
+        <p class="popup__title">Закажите бесплатный обратный звонок для консультации со специалистом!</p>
+        <div class="input-wrap">
+          <label for="input-name" class="input-hint">
+            Фамилия и Имя<span>*</span>
+          </label>
+          <input type="text" id="input-name" class="input" value="">
+        </div>
+        <div class="input-wrap">
+          <label for="input-tel" class="input-hint">
+            Телефон<span>*</span>
+          </label>
+          <input type="tel" id="input-tel" class="input" value="">
+        </div>
+        <input type="email" class="input" placeholder="E-mail">
+        <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+        <div class="popup__btn"><a href="#" class="btn">Получить консультацию</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
