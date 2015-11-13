@@ -18,6 +18,80 @@ $(document).ready(function(){
       }
     }
   });
+  $(".modal-service").fancybox({
+    type: 'inline',
+    fixed:false,
+    title: '',
+    width: '100%',
+    height: 'auto',
+    padding: 0,
+    autoResize: false,
+    autoSize: true,
+    autoCenter: false,
+    fitToView: false,
+    minWidth: 320,
+    scrolling   : 'no',
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    },
+    afterLoad: function() {
+      if(this.element.data("name")) {
+        $('#service-popup .form-wrap').removeClass('sended');
+        $('#service-popup .popup__subtitle').html(this.element.data("name"));
+        $('#service-popup .popup__text').html(this.element.data("text"));
+        $('#service-popup .popup__title').html('Получить подробный расчет по '+this.element.data("name2"));
+        $('#service-popup .popup__half img').attr('src', this.element.data("img"));
+        $('#service-popup .form-theme').val(this.element.data("name"));
+        $('#service-popup .input-hint').removeClass('hide');
+      }
+    }
+  });
+  $(".modal-goods").fancybox({
+    type: 'inline',
+    fixed:false,
+    title: '',
+    width: '100%',
+    height: 'auto',
+    padding: 0,
+    autoResize: false,
+    autoCenter: false,
+    autoSize: true,
+    fitToView: false,
+    minWidth: 320,
+    scrolling   : 'no',
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    },
+    afterLoad: function() {
+      var minus = "", plus = "";
+      if(this.element.data("plus")) 
+      {
+        plus = '<p class="popup__notes-title">Плюcы:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("plus") + 
+        '</div>'
+      };
+      if(this.element.data("minus"))
+      {
+        minus = '<p class="popup__notes-title">Минусы:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("minus") + 
+        '</div>'
+      };
+      if(this.element.data("name")) {
+        $('#goods-popup .form-wrap').removeClass('sended');
+        $('#goods-popup .popup__title').html(this.element.data("name"));
+        $('#goods-popup .popup__half img').attr('src', this.element.data("img"));
+        $('#goods-popup .popup__notes').html(plus + minus);
+        $('#goods-popup .form-theme').val(this.element.data("name"));
+        $('#goods-popup .input-hint').removeClass('hide');
+      }
+    }
+  });
   $(".services__line").each(function(){
     var heights =  $(this).find(".services__item-holder").map(function() {return $(this).height();});
     $(this).find(".services__item-holder").height(Math.max.apply(null, heights));

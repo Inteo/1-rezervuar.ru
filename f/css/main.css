@@ -614,6 +614,7 @@ input[type='checkbox']:checked + label::after {
   font-weight: bold;
   font-size: 16px;
   padding: 16px 72px;
+  border: none;
   margin-bottom: 0;
   line-height: 25px;
   color: #1b1615;
@@ -3804,26 +3805,22 @@ button.close {
   font-weight: normal;
 }
 ::-webkit-input-placeholder {
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   font-style: italic;
 }
 ::-moz-placeholder {
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
   font-style: italic;
 }
 :-ms-input-placeholder {
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   font-style: italic;
 }
 input:-moz-placeholder {
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
@@ -3889,7 +3886,7 @@ textarea {
 .fancybox-close {
   width: 20px;
   height: 20px;
-  background: #002c6b;
+  background: #004dd7;
   top: 0;
   right: 0;
   z-index: auto;
@@ -3904,12 +3901,14 @@ textarea {
   bottom: 0;
   margin: auto;
   content: '';
-  background: url(../../f/i/icons.png) -76px 0;
+  background: url(../../f/i/icons.png) -187px 0;
 }
 .popup {
   padding: 20px;
-  background: url(../../f/i/patterns/1.jpg) repeat;
   max-width: 880px;
+}
+.popup_callback {
+  text-align: center;
 }
 .popup_callback input,
 .popup_callback textarea,
@@ -3917,60 +3916,104 @@ textarea {
 .popup_callback .popup__title {
   text-align: center !important;
 }
+.popup_callback .popup__title {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.popup_callback textarea {
+  margin-bottom: 30px;
+}
 .popup__holder {
   padding: 40px;
-  background: #002c6b;
+  background: url(../../f/i/patterns/1.jpg) repeat-x;
+  background-size: contain;
+}
+.popup_callback .popup__holder {
+  padding-top: 30px;
 }
 .popup__title {
-  font: bold 24px/34px 'Proxima Nova', sans-serif;
-  margin-bottom: 35px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
   color: #fff;
-  margin-top: -9px;
+  margin-bottom: 35px;
+}
+.popup_goods .popup__title {
+  text-align: center;
 }
 .popup__half {
   display: inline-block;
   vertical-align: top;
   width: 50%;
+  overflow: hidden;
   padding-right: 20px;
-}
-.popup__half:nth-child(even) {
-  padding-left: 20px;
-  padding-right: 0;
 }
 .popup__half img {
   margin-bottom: 15px;
+  width: 100%;
+}
+.popup__half:nth-of-type(even) {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.popup_goods .popup__half img {
+  margin-bottom: 25px;
 }
 .popup__btn {
   text-align: center;
   padding: 20px 0 0;
 }
-.popup input,
+.popup__btn:active {
+  padding: 20px 0 0;
+}
+.popup input[type="text"],
+.popup input[type="email"],
+.popup input[type="tel"],
 .popup textarea,
 .popup label {
-  text-align: left;
   padding-left: 40px;
   padding-right: 40px;
-  line-height: 28px;
+  text-align: left;
 }
 .popup__subtitle {
   color: #fff;
-  font: bold 20px/34px 'Proxima Nova', sans-serif;
   margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 34px;
 }
 .popup__text {
   color: #fff;
 }
 .popup__notes {
   margin-bottom: 30px;
-  margin-top: -25px;
 }
 .popup__notes-title {
-  color: #3d8abb;
+  line-height: 28px;
+  color: #1985dd;
 }
 .popup__notes-text {
   color: #fff;
   padding-left: 20px;
+}
+.popup__hint {
+  font-style: italic;
+  color: #fff;
   margin-bottom: 10px;
+}
+.popup__file {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: .025em;
+  color: #fff;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.form-success {
+  background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+  color: #fff;
+  margin-top: 20px;
+  display: none;
+  padding: 10px 20px;
 }
 [class^="icon-"],
 [class*=" icon-"] {

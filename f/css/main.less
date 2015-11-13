@@ -616,6 +616,7 @@ input[type='checkbox']:checked + label::after {
   font-weight: bold;
   font-size: 16px;
   padding: 16px 72px;
+  border: none;
   margin-bottom: 0;
   line-height: 25px;
   color: #1b1615;
@@ -3820,26 +3821,22 @@ button.close {
 @yellow: #ffd42a;
 
 ::-webkit-input-placeholder { 
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   font-style: italic;
 }
 ::-moz-placeholder { 
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
   font-style: italic;
 } 
 :-ms-input-placeholder { 
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   font-style: italic;
 }
 input:-moz-placeholder { 
-  line-height: 20px;
   font-size: 14px;
   color: #d2d2d2;
   opacity: 1;
@@ -3905,7 +3902,7 @@ textarea {
 .fancybox-close {
   width: 20px;
   height: 20px;
-  background: #002c6b;
+  background: #004dd7;
   top: 0;
   right: 0;
   z-index: auto;
@@ -3919,76 +3916,120 @@ textarea {
     bottom: 0;
     margin: auto;
     content: '';
-    background: url(../../f/i/icons.png) -76px 0;
+    background: url(../../f/i/icons.png) -187px 0;
   }
 }
 .popup {
   padding: 20px;
-  background: url(../../f/i/patterns/1.jpg) repeat;
   max-width: 880px;
   &_callback {
+    text-align: center;
     & input,
     & textarea,
     & label,
     & .popup__title {
       text-align: center !important;
     }
+    & .popup__title {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    & textarea {
+      margin-bottom: 30px;
+    }
   }
   &__holder {
     padding: 40px;
-    background: #002c6b;
+    background: url(../../f/i/patterns/1.jpg) repeat-x;
+    background-size: contain;
+  }
+  &_callback &__holder {
+    padding-top: 30px;
   }
   &__title {
-    font: bold 24px/34px 'Proxima Nova', sans-serif;
-    margin-bottom: 35px;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
     color: #fff;
-    margin-top: -9px;
+    margin-bottom: 35px;
+  }
+  &_goods &__title {
+    text-align: center;
   }
   &__half {
     display: inline-block;
     vertical-align: top;
     width: 50%;
+    overflow: hidden;
     padding-right: 20px;
-    &:nth-child(even) {
+    & img {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    &:nth-of-type(even) {
       padding-left: 20px;
       padding-right: 0;
     }
-    & img {
-      margin-bottom: 15px;
-    }
+  }
+  &_goods &__half img {
+    margin-bottom: 25px;
   }
   &__btn {
     text-align: center;
     padding: 20px 0 0;
   }
-  & input,
+  &__btn:active {
+    padding: 20px 0 0;
+  }
+  & input[type="text"],
+  & input[type="email"],
+  & input[type="tel"],
   & textarea,
   & label {
-    text-align: left;
     padding-left: 40px;
     padding-right: 40px;
-    line-height: 28px;
+    text-align: left;
   }
   &__subtitle {
     color: #fff;
-    font: bold 20px/34px 'Proxima Nova', sans-serif;
     margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 34px;
   }
   &__text {
     color: #fff;
   }
   &__notes {
     margin-bottom: 30px;
-    margin-top: -25px;
     &-title {
-      color: #3d8abb;
+      line-height: 28px;
+      color: #1985dd;
     }
     &-text {
       color: #fff;
       padding-left: 20px;
-      margin-bottom: 10px;
     }
   }
+  &__hint {
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  &__file {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: .025em;
+    color: #fff;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+.form-success {
+  background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+  color: #fff;
+  margin-top: 20px;
+  display: none;
+  padding: 10px 20px;
 }
 [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
