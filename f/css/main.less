@@ -4003,7 +4003,8 @@ textarea {
     margin-bottom: 30px;
     &-title {
       line-height: 28px;
-      color: #1985dd;
+      color: #5ba7ee;
+      letter-spacing: .025em;
     }
     &-text {
       color: #fff;
@@ -4022,6 +4023,10 @@ textarea {
     color: #fff;
     margin-bottom: 20px;
     display: inline-block;
+    & a {
+      font-size: 18px;
+      color: #fff;
+    }
   }
 }
 .form-success {
@@ -4517,6 +4522,9 @@ textarea {
     width: 33.333333%;
     padding-left: 40px;
     margin-bottom: 35px;
+    & a {
+      text-decoration: none;
+    }
   }
   &__img {
     background: #1169c1;
@@ -4548,22 +4556,27 @@ textarea {
     line-height: 34px;
     margin-bottom: -5px;
   }
-  &__link {
+  &__name {
     color: #fff;
     font-size: 18px;
     line-height: 28px;
     display: inline-block;
     vertical-align: top;
+    text-decoration: underline !important;
     & p {
       padding-left: 15px;
     }
   }
-  &_solutions &__link {
+  &__info {
+    color: @gray;
+    line-height: 28px;
+  }
+  &_solutions &__name {
     color: @blue;
     font-weight: bold;
     text-decoration: underline;
   }
-  &_solutions a:hover &__link {
+  &_solutions a:hover &__name {
     color: @orange;
   }
   &__calc {

@@ -92,6 +92,69 @@ $(document).ready(function(){
       }
     }
   });
+  $(".modal-ready").fancybox({
+    type: 'inline',
+    fixed:false,
+    title: '',
+    width: '100%',
+    height: 'auto',
+    padding: 0,
+    autoResize: false,
+    autoSize: true,
+    autoCenter: false,
+    fitToView: false,
+    minWidth: 320,
+    scrolling   : 'no',
+    helpers: {
+      overlay: {
+        fixed: false
+      }
+    },
+    afterLoad: function() {
+      var params = "", use = "", equip = "", add = "", file = "";
+      if(this.element.data("file")) 
+      {
+        file = '<a href="'+ this.element.data("file") +'">Ссылка на pdf</a>'
+      };
+      if(this.element.data("params")) 
+      {
+        params = '<p class="popup__notes-title">Параметры:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("params") + 
+        '</div>'
+      };
+      if(this.element.data("use")) 
+      {
+        use = '<p class="popup__notes-title">Используется для хранения:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("use") + 
+        '</div>'
+      };
+      if(this.element.data("equip")) 
+      {
+        equip = '<p class="popup__notes-title">Оснащен необходимым навесным оборудованием:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("equip") + 
+        '</div>'
+      };
+      if(this.element.data("add")) 
+      {
+        add = '<p class="popup__notes-title">Дополнительно может быть оснащен:</p>' +
+        '<div class="popup__notes-text">' +
+          this.element.data("add") + 
+        '</div>'
+      };
+      if(this.element.data("name")) {
+        $('#ready-popup .form-wrap').removeClass('sended');
+        $('#ready-popup .popup__title').html(this.element.data("name"));
+        $('#ready-popup .popup__file').html(file);
+        $('#ready-popup .popup__half img').attr('src', this.element.data("img"));
+        $('#ready-popup .popup__notes').html(params + use + equip + add);
+        $('#ready-popup .form-theme').val(this.element.data("name"));
+        $('#ready-popup .input-hint').removeClass('hide');
+      }
+    }
+  });
   $(".services__line").each(function(){
     var heights =  $(this).find(".services__item-holder").map(function() {return $(this).height();});
     $(this).find(".services__item-holder").height(Math.max.apply(null, heights));
