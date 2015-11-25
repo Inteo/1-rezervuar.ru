@@ -356,8 +356,15 @@ h1 {
   margin-bottom: 50px;
   letter-spacing: -.025em;
 }
+h2 {
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 10px;
+  letter-spacing: .025em;
+  font-weight: bold;
+}
 p {
-	margin: 0;
+	margin: 0 0 25px 0;
 }
 small,
 .small {
@@ -387,16 +394,32 @@ ol {
 }
 ol li {
   position: relative; 
-  margin-bottom: 15px; 
-  color: #37474f;
-  line-height: 30px;
+  margin-bottom: 10px; 
 }
 ol li:before {
   content: counter(li)'.';
   counter-increment:li;
-  /* color: @orange; */
-  font-weight:bold;
-  padding-right: 15px;
+  color: #0d55ad; 
+  padding-left: 15px;
+  margin-right: 5px;
+}
+ul {
+  list-style: none;
+  & li {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      left: 15px;
+      top: .7em;
+      background: #0d55ad;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+    }
+  }
 }
 dl {
   margin-top: 0;
@@ -519,16 +542,35 @@ pre code {
   border-radius: 0;
 }
 table {
-  background-color: transparent;
+  background: #efefef;
+  width: 100%;
 }
 caption {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: #777;
-  text-align: left;
+  padding-bottom: 10px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+  background: #efefef;
 }
 th {
   text-align: left;
+  opacity: .5;
+  font-weight: normal;
+  padding: 20px 35px;
+  border-bottom: 1px solid #e3e3e3;
+}
+tr {
+  background: #efefef;
+  &:nth-of-type(odd) {
+    background: #ececec;
+  }
+  &:first-child {
+    background: #efefef;
+  }
+}
+td {
+  padding: 30px 35px;
+  line-height: 34px;
 }
 fieldset {
   min-width: 0;
@@ -4004,11 +4046,15 @@ textarea {
     &-title {
       line-height: 28px;
       color: #5ba7ee;
+      margin-bottom: 0;
       letter-spacing: .025em;
     }
     &-text {
       color: #fff;
       padding-left: 20px;
+      & p {
+        margin-bottom: 0;
+      }
     }
   }
   &__hint {
@@ -4148,10 +4194,12 @@ textarea {
 	line-height: 100px;
 	text-align: center;
   float: right;
+  margin-bottom: 0;
 }
 .copyright {
   float: left;
   line-height: 100px;
+  margin-bottom: 0;
   font-size: 16px;
 }
 .holder {
@@ -4308,6 +4356,10 @@ textarea {
       line-height: 24px;
       text-align: center;
       margin-left: 20px;
+      margin-bottom: 0;
+      &:before {
+        display: none;
+      }
       & a {
         font-size: 18px;
         line-height: 18px;
@@ -4339,7 +4391,20 @@ textarea {
 	position: relative;
 	z-index: 1;
   overflow: hidden;
-	padding-top: 230px;
+	//padding-top: 230px;
+  &__holder {
+    height: 100%;
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+    }
+  }
+  &_small {
+    height: 315px;
+  }
 	& img {
 		position: absolute;
 		top: 0;
@@ -4350,6 +4415,9 @@ textarea {
 		z-index: -1;
 	}
 	&__text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
     font: 60px/60px 'Archive', sans-serif;
     letter-spacing: .075em;
     color: #fff;
@@ -4418,6 +4486,7 @@ textarea {
     font-size: 18px;
     line-height: 28px;
     color: #fff;
+    margin-bottom: 0;
   }
   &__slider {
     position: relative;
@@ -4469,6 +4538,7 @@ textarea {
   &__text {
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 0;
     color: #fff;
     display: inline-block;
   }
@@ -4525,6 +4595,9 @@ textarea {
     & a {
       text-decoration: none;
     }
+    & p {
+      margin-bottom: 0;
+    }
   }
   &__img {
     background: #1169c1;
@@ -4554,7 +4627,7 @@ textarea {
   &__subtitle {
     color: #1985dd;
     line-height: 34px;
-    margin-bottom: -5px;
+    margin-bottom: -5px !important;
   }
   &__name {
     color: #fff;
@@ -4624,6 +4697,7 @@ textarea {
     vertical-align: top;
   }
   &__text {
+    margin-bottom: 0;
     & p {
       margin-bottom: 20px;
       &:last-child {
@@ -4728,7 +4802,6 @@ textarea {
   }
 }
 .contacts {
-
   &__map {
     float: left;
     width: 520px;
@@ -4741,7 +4814,6 @@ textarea {
   }
   &__address {
     font-size: 16px;
-    margin-bottom: 25px;
     margin-top: -5px;
   }
   &__mail {
@@ -4753,5 +4825,55 @@ textarea {
     font-size: 18px;
     letter-spacing: .025em;
     font-weight: bold;
+  }
+}
+.goods {
+  margin-bottom: -20px;
+  &__img {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  &__text {
+    padding-bottom: 10px;
+  }
+  &__list {
+    border: 20px solid #efefef;
+    padding: 50px 60px;
+    margin-bottom: 30px;
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.goods-table {
+  background: #efefef;
+}
+.important {
+  background: #efefef;
+  overflow: hidden;
+  padding: 75px 80px 65px;
+  position: relative;
+  margin-bottom: 35px;
+  z-index: 1;
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: #0d55ad;
+    margin-bottom: 5px;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+  &__back {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: 0;
   }
 }

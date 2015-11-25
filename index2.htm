@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="f/i//favicon.ico">
+    <title>Rezervuar</title>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="f/js/jquery-1.11.3.min.js"></script>
+    <script src="f/js/jquery.scrollTo.min.js"></script>
+    <script src="f/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+    <link rel="stylesheet" href="f/fancybox/jquery.fancybox.css?v=2.1.5" media="screen">
+    <script src="f/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" href="f/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="f/js/common.js"></script>
+    <script>
+      $(document).ready(function(){
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [55.830237, 37.517930],
+            zoom: 17,
+            controls: [],
+          }),
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: '',
+            balloonContent: ''
+          },
+          {
+            iconLayout: 'default#image',
+            iconImageHref: 'f/i/marker.png',
+            iconImageSize: [20, 34],
+            iconImageOffset: [-10, -34]
+          });
+        myMap.geoObjects.add(myPlacemark);
+      });
+  	});
+    </script>
+  </head>
+<body>
+  <div class="wrap clearfix">  
+    <header class="header clearfix">
+      <a href="#" class="header__ham iconize-ham">&nbsp;</a>
+      <div class="header__holder">
+        <div class="holder">
+          <div class="logo">
+            <a href="/"><span>Первая<br> резервуарная<br> компания</span></a>
+          </div>
+          <div class="header__mail"><a href="mailto:info@1-rezervuar.ru"><i class="icon-mail"></i>info@1-rezervuar.ru</a></div>
+        </div>
+      </div>
+      <div class="header__phone">
+        <p>+7 (495) 135-08-87</p>
+        <a href="#callback-popup" class="modal-inline">Закзать обратный звонок</a>
+      </div>
+      <div class="ham-menu">
+        <ul>
+          <li><a href="#">О нас в цифрах</a></li>
+          <li><a href="#">Виды резервуаров</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Выполненные работы</a></li>
+          <li><a href="#">Нам доверяют</a></li>
+          <li><a href="#">Факты о нас</a></li>
+        </ul>
+        <a href="#" class="ham-menu__search iconize-search">&nbsp;</a>
+      </div>
+    </header>
+    <div class="content">
+      <section class="preface preface_small">
+        <div class="holder preface__holder">
+          <h1 class="preface__text">
+            Стальные<br>резервуары<br><span>от производителя</span>
+          </h1>
+        </div>
+        <img src="f/i/preface-back2.jpg" alt="">
+      </section>
+      <section class="consult">
+        <div class="holder">
+          <p class="consult__text">Закажите расчет стоимости Вашего резервуара<br>или проконсультируйтесь со специалистом!</p>
+          <a href="#callback-popup" class="btn consult__btn modal-inline">Получить расчет</a>
+        </div>
+      </section>
+      <section class="subsection goods">
+      	<div class="holder">
+      		<h2>Резервуар для нефти и нефтепродуктов</h2>
+      		<div class="goods__text">
+      			<p>– это герметичная металлическая ёмкость, изготовленная из высокопрочной стойкой к коррозии стали, способной выдерживать длительный контакт с нефтью и нефтепродуктами.</p><p>Как правило, ёмкости для нефтепродуктов имеют горизонтальную цилиндрическую форму, что обусловлено удобством транспортировки и монтажа.</p>
+      		</div>
+      		<img src="f/i/goods2.jpg" alt="" class="goods__img">
+      		<div class="goods__text">
+      			<p>При необходимости резервуар для нефтепродуктов может быть выполнен в одно- или двустенном варианте, в наземном или подземном виде, а также иметь одно- или многокамерное строение. Определяющими характеристиками для изготовления любого резервуара являются его объем, линейные размеры и требования Заказчика. У нас вы можете выбрать типовое решение стального резервуара или заказать изготовление металлической ёмкости по индивидуальным параметрам.</p><p>Особое внимание специалисты нашей компанииуделяют обеспечению герметичности ёмкости как при изготовлении, так и в процессе её эксплуатации. Внутренняя и наружная поверхность резервуара покрываются антикоррозийными материалами, защищающими ёмкость от воздействия агрессивных сред. Подземные резервуары для нефти дополнительно покрывают гидроизоляцией. При наземном размещении ёмкости для нефтепродуктов чаще всего поставляются в комплекте с теплоизоляцией (минеральная вата, оцинкованная сталь)</p>
+      		</div>
+      		<div class="important">
+      			<img src="f/i/important.jpg" class="important__back" alt="">
+      			<p class="important__title">Важная информация</p>
+      			<p class="important__text">Особое внимание специалисты нашей компании уделяют обеспечению герметичности ёмкости как при изготовлении, так и в процессе её эксплуатации. </p>
+      		</div>
+      		<div class="goods__text">
+      			<p>При необходимости резервуар для нефтепродуктов может быть выполнен в одно- или двустенном варианте, в наземном или подземном виде, а также иметь одно- или многокамерное строение. Определяющими характеристиками для изготовления любого резервуара являются его объем, линейные размеры и требования Заказчика. У нас вы можете выбрать типовое решение стального резервуара или заказать изготовление металлической ёмкости по индивидуальным параметрам.</p>
+      		</div>
+      		<div class="goods__list">
+      			<p class="goods__list-title">Маркированный список</p>
+      			<ul>
+      				<li>Выбор индивидуального проекта - это выбор модернизированных мини АЗС и резервуаров.</li>
+							<li>Яркий пример "нестандартного" проекта - изготовление аппаратов, работающих без избыточного давления</li>
+							<li>Многолетний практический опыт проектирования и разработка индивидуальных решений</li>
+							<li>Лучшая рекомендация и гарантия качества нашей работы - это многолетнее и плодотворное сотрудничество</li>
+      			</ul>
+      		</div>
+      		<div class="goods__text">
+      			<p>Особое внимание специалисты нашей компанииуделяют обеспечению герметичности ёмкости как при изготовлении, так и в процессе её эксплуатации. Внутренняя и наружная поверхность резервуара покрываются антикоррозийными материалами, защищающими ёмкость от воздействия агрессивных сред. Подземные резервуары для нефти дополнительно покрывают гидроизоляцией. При наземном размещении ёмкости для нефтепродуктов чаще всего поставляются в комплекте с теплоизоляцией (минеральная вата, оцинкованная сталь)</p>
+      		</div>
+      		<div class="goods__list">
+      			<p class="goods__list-title">Нумерованный список</p>
+      			<ol>
+      				<li>Наземные резервуары</li>
+							<li>Подземные резервуары</li>
+							<li>Одностенные резервуары</li>
+							<li>Двустенные резервуары</li>
+      			</ol>
+      		</div>
+      	</div>
+      </section>
+      <section class="subsection goods-table">
+      	<div class="holder">
+    			<table>
+    				<caption>Характеристики типовых резервуаров</caption>
+    				<tr>
+    					<th>Обозначение</th>
+    					<th>Объем, м3</th>
+    					<th>Диаметр, мм</th>
+    					<th>Длина, мм</th>
+    					<th>Масса, кг</th>
+    				</tr>
+    				<tr>
+    					<td>РГЦ 3</td>
+    					<td>3</td>
+    					<td>1250</td>
+    					<td>2750</td>
+    					<td>530-830</td>
+    				</tr>
+    				<tr>
+    					<td>РГЦ 5</td>
+    					<td>5</td>
+    					<td>1900</td>
+    					<td>2030</td>
+    					<td>700-1100</td>
+    				</tr>
+    				<tr>
+    					<td>РГЦ 10</td>
+    					<td>10</td>
+    					<td>2220</td>
+    					<td>3310</td>
+    					<td>990-1800</td>
+    				</tr>
+    				<tr>
+    					<td>РГЦ 15</td>
+    					<td>15</td>
+    					<td>2350</td>
+    					<td>4030</td>
+    					<td>1400-2600</td>
+    				</tr>
+    				<tr>
+    					<td>...</td>
+    					<td>...</td>
+    					<td>...</td>
+    					<td>...</td>
+    					<td>...</td>
+    				</tr>
+    				<tr>
+    					<td>РГЦ 100</td>
+    					<td>100</td>
+    					<td>3240</td>
+    					<td>12700</td>
+    					<td>5400-10900</td>
+    				</tr>
+    			</table>
+    		</div>
+      </section>
+      <section class="calc-form">
+        <div class="holder">
+          <div class="calc-form__holder">
+            <p class="subsection__title subsection__title_white">Расчет стоимости резервуара</p>
+            <div class="form-wrap">
+              <form id="callbackform" method="post" action="/send/">
+                <div class="input-wrap">
+                  <label for="input-name" class="input-hint">
+                    Фамилия и Имя<span>*</span>
+                  </label>
+                  <input type="text" id="input-name" class="input" value="">
+                </div>
+                <div class="input-wrap">
+                  <label for="input-tel" class="input-hint">
+                    Телефон<span>*</span>
+                  </label>
+                  <input type="tel" id="input-tel" class="input" value="">
+                </div>
+                <input type="email" class="input" placeholder="E-mail">
+                <p class="calc-form__hint">Для расчета стоимости Вашего резервуара загрузите документы:</p>
+                <a href="#" class="calc-form__file">Прикрепить файлы</a>
+                <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+                <div class="calc-form__btn"><input class="btn" type="submit" data-loading-text="Отправка..." value="Получить расчет"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subsection contacts clearfix">
+        <div class="holder">
+          <p class="subsection__title">Контакты</p>
+          <div class="contacts__map" id="map"></div>
+          <div class="contacts__info">
+            <p class="contacts__address">г. Москва, Коптевская ул., 67 (Бизнес-центр «Таволга»)</p>
+            <a href="mailto:info@1-rezervuar.ru" class="contacts__mail">info@1-rezervuar.ru</a>
+            <p class="contacts__phone">+7 (495) 135-08-87</p>
+          </div>
+        </div>
+      </section>
+      <section class="consult">
+        <div class="holder">
+          <p class="consult__text">Закажите расчет стоимости Вашего резервуара<br>или проконсультируйтесь со специалистом!</p>
+          <a href="#callback-popup" class="btn consult__btn modal-inline">Получить расчет</a>
+        </div>
+      </section>
+    </div>
+  </div> 
+  <div class="footer">
+    <div class="holder">
+      <p class="copyright">© 2015 АО «Первая резервуарная компания»</p>
+      <p class="madeby">
+        Создание сайта - <a class="icon-inteo" target="_blank" rel="external nofollow" href="http://inteo-s.ru"></a></a>
+      </p>
+    </div>
+  </div>
+  <div class="popups">
+    <div class="popup" id="service-popup" style="width: 840px;">
+        <div class="popup__holder">
+          <div class="popup__half">
+            <img src="" alt="">
+            <p class="popup__subtitle"></p>
+            <div class="popup__text"></div>
+          </div><div class="popup__half">
+            <p class="popup__title"></p>
+            <div class="form-wrap"><form id="serviceform" method="post" action="/send/"><div class="input-wrap">
+              <label for="serviceform-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" id="serviceform-name" class="input" value="" name="person">
+            </div>
+            <div class="input-wrap">
+              <label for="serviceform-phone" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+              <input type="tel" id="serviceform-phone" class="input" value="" name="phone">
+            </div>
+            <input type="email" class="input" placeholder="E-mail" name="email">
+            <textarea class="input" placeholder="Введите Ваше сообщение" name="message"></textarea>
+          <div class="popup__btn"><input type="hidden" class="form-theme" name="theme" value=""><input type="hidden" name="type" value="service"><input class="btn" type="submit" data-loading-text="Отправка..." value="Получить расчет"></div></form><div class="form-success">Ваше сообщение отправлено!</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_goods" id="goods-popup" style="width: 840px;">
+      <div class="popup__holder">
+        <p class="popup__title"></p>
+        <div class="popup__half">
+          <img src="" alt="">
+           <div class="popup__notes"></div>
+        </div><div class="popup__half">
+          <div class="form-wrap">
+            <form id="questionform" method="post" action="/send/">
+              <div class="input-wrap">
+              <label for="questionform-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" class="input" id="questionform-name" value="" name="person">
+            </div>
+            <div class="input-wrap">
+              <label for="questionform-phone" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+                <input type="tel" id="questionform-phone" class="input" value="" name="phone">
+              </div>
+              <input type="email" class="input" placeholder="E-mail" name="email">
+              <textarea class="input" placeholder="Введите Ваше сообщение" name="message"></textarea>
+              <div class="popup__btn"><input type="hidden" class="form-theme" name="theme" value=""><input type="hidden" name="type" value="consult"><input class="btn" type="submit" data-loading-text="Отправка..." value="Получить расчет"></div>
+            </form>
+            <div class="form-success">Ваше сообщение отправлено!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_goods" id="ready-popup" style="width: 840px;">
+      <div class="popup__holder">
+        <p class="popup__title"></p>
+        <div class="popup__half">
+          <img src="" alt="">
+          <p class="popup__file"></p>
+          <div class="popup__notes"></div>
+        </div><div class="popup__half">
+          <div class="form-wrap">
+            <form id="questionform" method="post" action="/send/">
+              <div class="input-wrap">
+              <label for="questionform-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" class="input" id="questionform-name" value="" name="person">
+            </div>
+            <div class="input-wrap">
+              <label for="questionform-phone" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+                <input type="tel" id="questionform-phone" class="input" value="" name="phone">
+              </div>
+              <input type="email" class="input" placeholder="E-mail" name="email">
+              <textarea class="input" placeholder="Введите Ваше сообщение" name="message"></textarea>
+              <div class="popup__btn"><input type="hidden" class="form-theme" name="theme" value=""><input type="hidden" name="type" value="consult"><input class="btn" type="submit" data-loading-text="Отправка..." value="Отправить заявку"></div>
+            </form>
+            <div class="form-success">Ваше сообщение отправлено!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup popup_callback" id="callback-popup" style="width: 480px;">
+      <div class="popup__holder">
+        <p class="popup__title">Закажите бесплатный обратный <br>звонок для расчет стоимости <br>резервуара!</p>
+        <div class="form-wrap">
+          <form id="callbackform" method="post" action="/send/">
+            <div class="input-wrap">
+              <label for="input-name" class="input-hint">
+                Фамилия и Имя<span>*</span>
+              </label>
+              <input type="text" id="input-name" class="input" value="">
+            </div>
+            <div class="input-wrap">
+              <label for="input-tel" class="input-hint">
+                Телефон<span>*</span>
+              </label>
+              <input type="tel" id="input-tel" class="input" value="">
+            </div>
+            <input type="email" class="input" placeholder="E-mail">
+            <textarea class="input" placeholder="Введите Ваше сообщение"></textarea>
+            <p class="popup__hint">Для расчета стоимости Вашего <br>резервуара загрузите документы:</p>
+            <a href="#" class="popup__file">Прикрепить файлы</a>
+            <div class="popup__btn"><input class="btn" type="submit" data-loading-text="Отправка..." value="Получить расчет"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
